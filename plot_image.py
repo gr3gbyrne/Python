@@ -44,15 +44,15 @@ img2 = plt.imshow(imagedata,interpolation='nearest',
 #v = np.linspace(0, N-1, 6,endpoint=True)
 #plt.xticks(v)
 #plt.yticks(v)
-plt.xlabel('$X_c$',{'fontsize':23})
-plt.ylabel('$Y_c$',{'fontsize':23})
-plt.tick_params(axis='both', which='major', labelsize=15)
+plt.xlabel('$N_x$',{'fontsize':35})
+plt.ylabel('$N_y$',{'fontsize':35})
+plt.tick_params(axis='both', which='major', labelsize=25)
 
 v = np.linspace(0, max(imagedata.flatten()), 6,endpoint=True)
 cbaxes = fig.add_axes([0.82, 0.1, 0.03, 0.8]) #[left,bottom,width,height] 
 cb=plt.colorbar(img2,cmap=cmap2,cax=cbaxes,ticks=v)
-cb.ax.tick_params(labelsize=15) 
-cb.set_label(label='$log_{10}(T)$',size=23,weight='bold')
+cb.ax.tick_params(labelsize=25) 
+cb.set_label(label='$\mathrm{log_{10}( T )}$',size=35,weight='bold')
 
 fig.savefig("image.png",
             bbox_inches='tight', 
